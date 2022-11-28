@@ -61,7 +61,9 @@ public final class LambdaUtilities {
         /*
          * Suggestion: consider Optional.filter
          */
-        return null;
+        List<Optional<T>> newlist = new ArrayList<>();
+        list.forEach(i -> newlist.add(Optional.ofNullable(i).filter(pre)));
+        return newlist;
     }
 
     /**
