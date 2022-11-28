@@ -105,6 +105,7 @@ public final class LambdaUtilities {
          */
         final Map<K, V> m = new HashMap<>();
         map.forEach((k,v)->m.put(k,v.orElse(def.get())));
+        return m;
     }
 
     /**
